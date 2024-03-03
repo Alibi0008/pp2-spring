@@ -1,0 +1,5 @@
+a=input()
+x=slice(0,len(a), 1)
+c=slice(len(a),0,-1)
+d=slice(1)
+print(a[c]+a[d]==a)
