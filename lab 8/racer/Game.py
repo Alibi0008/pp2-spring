@@ -109,10 +109,6 @@ pygame.time.set_timer(INC_SPEED, 1000)
 pygame.mixer.music.load("lab 8/racer/sound/background.wav")
 pygame.mixer.music.play(-1)
 
-def create_coin():
-    new_coin = Coin()  # Create a new instance of the Coin sprite
-    coins.add(new_coin)  # Add the new coin sprite to the coin group
-
 # Game Loop
 while True:
     # Cycles through all events occurring
@@ -143,7 +139,7 @@ while True:
 
     # Generate new coins periodically
     if pygame.time.get_ticks() % 2000 == 0:  # Generate a new coin every 2000 milliseconds (2 seconds)
-        create_coin()
+        all_sprites.add(C1)
 
     # To be run if collision occurs between Player and Enemy
     if pygame.sprite.spritecollideany(P1, enemies):
